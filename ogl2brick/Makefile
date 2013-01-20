@@ -8,12 +8,12 @@ OBJS = draw.o ogl2brick.o shader.o
 
 # debug settings
 CFLAGS = -g
-LFLAGS = -g
+LFLAGS = -g 
 
 all: ${EXE}
 
 ${EXE}: ${OBJS}
-	${LINK.cpp} ${LFLAGS} -o $@ ${OBJS} -lGLEW -lglut -lGL
+	${LINK.cpp} ${LFLAGS} -o $@ ${OBJS} -lGLEW -lglut -lGL -lGLU
 
 clean:
 	-rm -f ${OBJS}
